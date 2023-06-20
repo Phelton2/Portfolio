@@ -15,9 +15,11 @@
 }
 
 .logo{
-    width: 100px;
+    width: 250px;
     cursor: pointer;
+    height: 60px;
 }
+
 
 .navbar{
     width: 85%;
@@ -36,6 +38,22 @@ button{
     border-radius: 20px;
     outline: none;
     cursor: pointer;
+    transition: background-color 0.6s ease;
+}
+button:hover{
+    background-color: black;
+    border-color:  violet;
+}
+
+.contact {
+    color: #fbfcfd;
+    padding: 10px 250px;
+    background: transparent;
+    border: 1px solid #fff;
+    border-radius: 20px;
+    outline: none;
+    cursor: pointer;
+    transition: background-color 0.6s ease;
 }
 
 .content{
@@ -50,6 +68,11 @@ button{
 
 h1{
     font-size: 80px;
+    margin: 10px;
+    line-height: 80px;
+}
+h2{
+    font-size: 40px;
     margin: 10px;
     line-height: 80px;
 }
@@ -150,3 +173,42 @@ h1{
 .bubbles img:nth-child(7){
     animation-delay: 7s;
 }
+
+
+.reactive-text h1 {
+    display: inline-block;
+    animation: typingEffect 2.8s steps(14) infinite;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 0;
+  }
+  
+  .cursor {
+    display: inline-block;
+    vertical-align: bottom;
+    width: 0.6em;
+    height: 6.1em;
+    background-color: #000;
+    animation: blinkCursor 0.9s infinite;
+  }
+  
+  @keyframes typingEffect {
+    0% {
+      width: 0;
+    }
+    100% {
+      width: 100%;
+    }
+  }
+  
+  @keyframes blinkCursor {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
